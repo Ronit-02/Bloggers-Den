@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com");
+
+:root {
+    --color--GREY-100: #FCFCFE;
+    --color--GREY-200: #F9FAFA;
+    --color--GREY-300: #F1F3F5;
+    --color--GREY-400: #E5E9EC;
+    --color--GREY-500: #D5DCE1;
+    --color--GREY-600: #C5CED6;
+    --color--GREY-700: #B7C2CC;
+    --color--GREY-800: #A5B2BD;
+    --color--BLUE-100: #F3FBFF;
+    --color--BLUE-200: #D6EDFF;
+    --color--BLUE-300: #A0D4FF;
+    --color--BLUE-400: #57B0FB;
+    --color--BLUE-500: #1292EE;
+    --color--BLUE-600: #0077CC;
+    --color--BLUE-700: #005CA4;
+    --color--BLUE-800: #034077;
+    --color--BLUE-900: #002651;
+    --color--CHARCOAL-200: #93A1B0;
+    --color--CHARCOAL-300: #748494;
+    --color--CHARCOAL-400: #556575;
+    --color--CHARCOAL-500: #405261;
+    --color--CHARCOAL-600: #314351;
+    --color--CHARCOAL-700: #253642;
+    --color--CHARCOAL-800: #1d2b36;
+    --color--GOLD-100: #FFF9EF;
+    --color--GOLD-200: #FFF2D7;
+    --color--GOLD-300: #FFE7B8;
+    --color--GOLD-400: #FDD88E;
+    --color--GOLD-500: #FFC555;
+    --color--GOLD-600: #FAB347;
+    --color--GOLD-700: #E89635;
+    --color--GOLD-800: #CE7129;
+    --color--GOLD-900: #B24319;
+    --color--GREEN-100: #F5FFF9;
+    --color--GREEN-200: #E3fBEE;
+    --color--GREEN-300: #C2F0D7;
+    --color--GREEN-400: #87DBAE;
+    --color--GREEN-500: #56C288;
+    --color--GREEN-600: #39AC6E;
+    --color--GREEN-700: #268C55;
+    --color--GREEN-800: #106236;
+    --color--GREEN-900: #003C1C;
+    --color--INDIGO-100: #F2F6FF;
+    --color--INDIGO-200: #DFE7FF;
+    --color--INDIGO-300: #B2C8FB;
+    --color--INDIGO-400: #79A1F8;
+    --color--INDIGO-500: #527CEB;
+    --color--INDIGO-600: #3B64D2;
+    --color--INDIGO-700: #2549A8;
+    --color--INDIGO-800: #16337F;
+    --color--INDIGO-900: #071E57;
+    --color--PURPLE-100: #F9F9FF;
+    --color--PURPLE-200: #EBECFF;
+    --color--PURPLE-300: #D9DCFD;
+    --color--PURPLE-400: #B9BEFF;
+    --color--PURPLE-500: #9FA6FF;
+    --color--PURPLE-600: #818AEC;
+    --color--PURPLE-700: #6269C5;
+    --color--PURPLE-800: #404996;
+    --color--PURPLE-900: #232A5C;
+    --color--PINK-100: #FFF9FB;
+    --color--PINK-200: #FFEEF1;
+    --color--PINK-300: #FFE1E7;
+    --color--PINK-400: #FFCCD7;
+    --color--PINK-500: #FFB3C3;
+    --color--PINK-600: #FD9AAE;
+    --color--PINK-700: #FF819A;
+    --color--PINK-800: #FC5D7D;
+    --color--PINK-900: #F23459;
+    --color--WHALETAIL-100: #F3F7FF;
+    --color--WHALETAIL-200: #E5EDFE;
+    --color--WHALETAIL-300: #D0DEFD;
+    --color--WHALETAIL-400: #AFC7F9;
+    --color--WHALETAIL-500: #8AABF1;
+    --color--WHALETAIL-600: #7296E1;
+    --color--WHALETAIL-700: #5174BB;
+    --color--WHALETAIL-800: #304F8B;
+    --color--WHALETAIL-900: #142F5E;
+
+
+    --column--0: 0.00000%;
+    --column--1: 8.33333%;
+    --column--2: 16.6667%;
+    --column--3: 25.0000%;
+    --column--4: 33.3333%;
+    --column--5: 41.6667%;
+    --column--6: 50.0000%;
+    --column--7: 58.3333%;
+    --column--8: 66.6667%;
+    --column--9: 75.0000%;
+    --column--10: 83.3333%;
+    --column--11: 91.6667%;
+    --column--12: 100.000%;
+
+
+    --spacing-xxl: 130px;
+    --spacing-xl: 80px;
+    --spacing-l: 50px;
+    --spacing-m: 30px;
+    --spacing-s: 20px;
+    --spacing-xs: 10px;
+
+    --font-family--default: 'Lexend Deca', sans-serif;
+    --font-weight--bold: 500;
+    --line-height--heading: 1.2;
+    --letter-spacing--heading: -0.01em;
+    --font-weight--heading: var(--font-weight--bold);
+    --line-height--display: 1.2;
+    --letter-spacing--display: -0.01em;
+    --font-weight--display: 600;
+    --line-height--text: 1.8;
+    --letter-spacing--text: -0.005em;
+    --font-weight--text: 400;
+    --line-height--blockquote: 1.6;
+    --letter-spacing--blockquote: -0.01em;
+    --font-weight--blockquote: 400;
+    --line-height--overline: 1.4;
+    --letter-spacing--overline: 0.07em;
+    --font-weight--overline: 500;
+    --line-height--input: 1.3;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    color: var(--color--CHARCOAL-800);
+    font-family: var(--font-family--default);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.42857;
+}
+
+*, ::after, ::before, input[type=search] {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+  }

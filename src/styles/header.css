@@ -1,0 +1,37 @@
+.header {
+    position: relative;
+    margin-top: 40px;
+}
+
+.header__titles {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__titles > * {
+    font-family: serif;
+}
+
+.header__titles--first {
+    font-weight: 800;
+    font-size: clamp(3rem, 8vw + 1rem, 5rem);
+}
+
+.header__titles--second {
+    position: absolute;
+    top: 90px;
+    color: white;
+    width: 25vw;
+    font-weight: 800;
+    font-size: clamp(3rem, 12vw + 1rem, 7rem);
+    text-indent: 0.75rem;
+    letter-spacing: 0.1em;
+}
+
+.header__image {
+    width: 100%;
+}
+
