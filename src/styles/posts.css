@@ -22,7 +22,24 @@
     font-size: 1rem;
     color: var(--color--BLUE-600);
     text-decoration: none;
-    transition: all 0.15s ease-in-out;  
+    transition: all 0.25s ease-in-out;  
+}
+
+.posts__title a::after{
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-right-width: 2px;
+    border-right-style: solid;
+    content: "";
+    display: inline-block;
+    margin-left: 0.3em;
+    position: relative;
+    pointer-events: none;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    transition: all 0.15s ease 0s;
+    vertical-align: middle;
 }
 
 .posts__content {
