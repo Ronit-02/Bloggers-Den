@@ -1,4 +1,5 @@
 .footer {
+    width: calc(100% - 120px);
     height: 150px;
     padding: 20px 0;
     margin: 0 60px;

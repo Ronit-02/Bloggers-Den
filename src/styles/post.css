@@ -1,21 +1,24 @@
 .post {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    margin: 50px 35px 30px 35px;
+    width: 100%;
 }
 
 .scale__mask {
+    border-radius: 4px;
     overflow: hidden;
 }
 
 .post__img {
+    position: relative;
     width: 100%;
-    transition: transform 2s linear;
+    transition: transform 0.2s linear;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .post__img:hover {
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
 .post__cat {
@@ -43,6 +46,6 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
