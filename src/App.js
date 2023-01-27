@@ -13,11 +13,14 @@ import NotFound from './pages/notfound/notFound'
 import {Route, Routes} from "react-router-dom"
 
 function App() {
+
+  const user = false;
+
   return (
     <div className='app'>
     <Navbar />
 
-    {/* <Routes>
+    <Routes>
       <Route path="/" element={ <Home />} />
       <Route path="/post/:id" element={ <Blogpost />} />
       <Route path="/about" element={ <About />} />
@@ -25,9 +28,9 @@ function App() {
       <Route path="/write" element={ <Write />} />
       <Route path="/login" element={ <Login />} />
       <Route path="*" element={<NotFound />} />
-    </Routes> */}
+    </Routes>
 
-    <Write />
+    {/* <Login /> */}
     <Footer />
     </div>
   );
