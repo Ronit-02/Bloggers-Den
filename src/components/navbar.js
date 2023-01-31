@@ -1,11 +1,16 @@
 import '../styles/navbar.css'
 
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {BsFacebook, BsInstagram, BsTwitter, BsSearch} from 'react-icons/bs'
 
 export default function Navbar() {
-  return (
 
+
+    const [style, setStyle] = useState();
+
+
+  return (
     <div className='navbar'>
         
         <div className='navbar__left'>
@@ -37,6 +42,7 @@ export default function Navbar() {
         <div className='navbar__right'>
             <img className='navbar__profile' src='/images/profile.jpg' alt='profile pic'/>
             <BsSearch className='navbar__logo' />
+            <button className="navbar__dark">Dark</button>
         </div>
     </div>
   )

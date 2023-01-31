@@ -4,7 +4,9 @@ import { useState } from 'react';
 
 export default function Write() {
 
-  const [text, setText] = useState("Enter text here");
+  const [text, setText] = useState(() => {
+    return ""
+  });
 
   const handleOnChange = (event) => {
     setText(event.target.value);
