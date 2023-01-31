@@ -1,13 +1,13 @@
 import '../styles/navbar.css'
 
-import { useState } from 'react'
+// import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {BsFacebook, BsInstagram, BsTwitter, BsSearch} from 'react-icons/bs'
 
 export default function Navbar() {
 
 
-    const [style, setStyle] = useState();
+    // const [style, setStyle] = useState();
 
 
   return (
