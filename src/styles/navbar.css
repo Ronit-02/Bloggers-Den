@@ -19,6 +19,15 @@
     animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
+.navbar > * > * {
+    margin-right: 15px;
+}
+
+.navbar__logo {
+    font-size: 1.3rem;
+    margin-left: 5px;
+}
+
 .navbar__left, .navbar__right {
     flex: 3;
     display: flex;
@@ -35,14 +44,6 @@
     cursor: pointer;
     font-weight: 500;
     font-size: 17px;
-}
-
-.navbar__left img, .navbar__right img {
-    width: 20px;
-}
-
-.navbar > * > * {
-    margin-right: 15px;
 }
 
 .navbar__center li a {
@@ -62,7 +63,7 @@
 }
 
 .navbar__profile {
-    width: 30px !important;
+    width: 30px;
     border-radius: 30px;
 }
 

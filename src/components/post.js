@@ -1,4 +1,5 @@
 import '../styles/post.css'
+import PropTypes from 'prop-types'
 
 export default function post({img, category, title, content}) {
   return (
@@ -18,4 +19,15 @@ export default function post({img, category, title, content}) {
 
     </div>
   )
+}
+
+post.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  category: PropTypes.string
+}
+
+post.defaultProps = {
+  img: 'https://img.freepik.com/premium-photo/happy-woman-sitting-car-traveling-summer-season-sea-resting-special-day-vacation_36577-127.jpg?w=2000',
+  category: 'travel'
 }

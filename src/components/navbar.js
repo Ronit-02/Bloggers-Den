@@ -1,6 +1,7 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
 import '../styles/navbar.css'
+
+import { Link } from 'react-router-dom'
+import {BsFacebook, BsInstagram, BsTwitter, BsSearch} from 'react-icons/bs'
 
 export default function Navbar() {
   return (
@@ -8,9 +9,9 @@ export default function Navbar() {
     <div className='navbar'>
         
         <div className='navbar__left'>
-            <img src='/images/facebook.png' alt='facebook logo'/>
-            <img src='/images/instagram.png' alt='instagram logo'/>
-            <img src='/images/twitter.png' alt='twitter logo'/>
+            <BsFacebook className='navbar__logo'/>
+            <BsInstagram className='navbar__logo'/>
+            <BsTwitter className='navbar__logo'/>
         </div>
 
         <div className='navbar__center'>
@@ -35,7 +36,7 @@ export default function Navbar() {
 
         <div className='navbar__right'>
             <img className='navbar__profile' src='/images/profile.jpg' alt='profile pic'/>
-            <img src='/images/search.png' alt='search logo'/>
+            <BsSearch className='navbar__logo' />
         </div>
     </div>
   )

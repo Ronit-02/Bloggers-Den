@@ -12,11 +12,12 @@ export default function posts() {
 
       <div className='posts__content'>
         <Post 
-          img = "https://img.freepik.com/premium-photo/happy-woman-sitting-car-traveling-summer-season-sea-resting-special-day-vacation_36577-127.jpg?w=2000" 
-          category = "Travel"
+          // img = "" 
+          // category = ""
           title = "Bondi Beach Trip"
           content = "Sydney is Australia’s largest and stunning city with its long sandy beaches, iconic architectures, scenic landscapes, and amazing native wildlife. As soon as you enter the city, you get hit by the vibrant and friendly ambience of the city. The city has been famous for various attractions,"
         />
+        
         <Post 
           img = "https://img.freepik.com/premium-photo/happy-woman-sitting-car-traveling-summer-season-sea-resting-special-day-vacation_36577-127.jpg?w=2000" 
           category = "Travel"
