@@ -2,7 +2,7 @@ import '../../styles/home.css'
 
 import Header from './header'
 import Posts from './posts' 
-import Sidebar from './sidebar'
+// import Sidebar from './sidebar'
 
 
 export default function Home() {

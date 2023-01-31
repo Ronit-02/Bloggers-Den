@@ -1,9 +1,9 @@
 import '../../styles/blogpost.css'
-import { useParams } from 'react-router-dom'
+// import { useParams } from 'react-router-dom'
 
 export default function Blogpost() {
 
-  const {id} = useParams()
+  // const {id} = useParams()
 
   return (
     <div className='blogpost'>
