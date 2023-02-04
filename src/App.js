@@ -4,7 +4,7 @@ import Navbar from './components/navbar'
 import Login from './pages/login/login'
 import Register from './pages/register/register'
 import Home from './pages/home/home';
-import Blogpost from './pages/blogpost/blogpost'
+import BlogPage from './pages/blogPage/blogPage'
 import About from './pages/about/about';
 import Contact from './pages/contact/contact';
 import Write from './pages/write/write'
@@ -27,7 +27,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route path="/" element={ <Home />} />
-      <Route path="/post/:id" element={ <Blogpost />} />
+      <Route path="/blogpage/:id" element={ <BlogPage />} />
       <Route path="/about" element={ <About />} />
       <Route path="/contact" element={ <Contact />} />
       <Route path="/write" element={ <Write />} />

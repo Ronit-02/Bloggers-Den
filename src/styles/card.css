@@ -1,4 +1,4 @@
-.post {
+.card {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -9,7 +9,7 @@
     overflow: hidden;
 }
 
-.post__img {
+.card__img {
     position: relative;
     width: 100%;
     height: 200px;
@@ -20,11 +20,11 @@
     opacity: 1; 
 }
 
-.post__img:hover {
+.card__img:hover {
     transform: scale(1.02);
 }
 
-.post__cat {
+.card__cat {
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.2rem;
@@ -32,7 +32,7 @@
     color: var(--color--BLUE-500);
 }
 
-.post__title {
+.card__title {
     margin: 10px 0;
     color: #2e475d;
     font-size: 1.5rem;
@@ -40,7 +40,7 @@
     font-weight: 700;
 }
 
-.post__content {
+.card__content {
     font-size: 1rem;
     line-height: 32px;
     letter-spacing: 0.025rem;

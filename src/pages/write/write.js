@@ -1,12 +1,26 @@
 import '../../styles/write.css'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Write() {
+  
+  const [text, setText] = useState("");
+  const [typing, setTyping] = useState("")
 
-  const [text, setText] = useState(() => {
-    return ""
-  });
+  let words = text.split(" ").length;
+
+
+  useEffect(() => {
+    console.log("mount")
+    setTyping("typing...")
+
+    return () => {  
+      console.log("unmount")
+      setTyping("")
+    }
+  }, [text])
+
+
 
   const handleOnChange = (event) => {
     setText(event.target.value);
@@ -24,8 +38,6 @@ export default function Write() {
     setText(newText);
   }
 
-  let words = text.split(" ").length;
-
   return (
     <div className='write'>
       
@@ -33,6 +45,9 @@ export default function Write() {
           <input className='write__title' type="text" placeholder='Title'/>
           <textarea className='write__text' type="text" placeholder='Tell me your story...' rows="8" value={text} onChange={handleOnChange}/>
           <button className="write__button write__publish">Publish</button>
+
+          <div className="write__info">{typing}</div>
+
           <div className="write__transform">
             <button className="write__button write__button--upper" onClick={upperCase}>Uppercase</button>
             <button className="write__button write__button--lower" onClick={lowerCase}>Lowercase</button>

@@ -48,6 +48,8 @@
 .blogpost__content {
     width: 70%;
     margin: 80px auto;
+    font-size: 21px;
+    line-height: 2;
 }
 
 .blogpost__image {
@@ -58,12 +60,12 @@
     border-radius: 4px;
 }
 
-.blogpost__content p {
-    margin: 20px 0;
+/* .blogpost__content p{
     font-size: 21px;
-}
+    margin: 20px 0;
+} */
 
-.blogpost__content h1 {
+/* .blogpost__content h1 {
     margin: 30px 0;
     font-size: 30px;
-}
+} */

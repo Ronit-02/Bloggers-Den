@@ -1,17 +1,24 @@
 import '../styles/navbar.css'
 
-// import { useState } from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {BsFacebook, BsInstagram, BsTwitter, BsSearch} from 'react-icons/bs'
 
 export default function Navbar() {
 
+    const [theme, setTheme] = useState("light");
 
-    // const [style, setStyle] = useState();
-
+    const toggleTheme = () => {
+        if(theme === 'light'){
+            setTheme("dark")
+        }
+        else{
+            setTheme("light")
+        }
+    };
 
   return (
-    <div className='navbar'>
+    <div className={`navbar-${theme} navbar`}>
         
         <div className='navbar__left'>
             <BsFacebook className='navbar__logo'/>
@@ -42,7 +49,10 @@ export default function Navbar() {
         <div className='navbar__right'>
             <img className='navbar__profile' src='/images/profile.jpg' alt='profile pic'/>
             <BsSearch className='navbar__logo' />
-            <button className="navbar__dark">Dark</button>
+            <label class="switch">
+                <input type="checkbox" onClick={toggleTheme}/>
+                <span class="slider round" ></span>
+            </label>
         </div>
     </div>
   )
