@@ -1,5 +1,5 @@
 import '../../styles/blogPage.css'
-import data from '../../components/data'
+import {data} from '../../components/data'
 import { useParams } from 'react-router-dom' 
 
 export default function BlogPage() {

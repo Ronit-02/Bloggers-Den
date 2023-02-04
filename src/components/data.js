@@ -1,5 +1,5 @@
-export default [
-
+export const data = [
+ 
     {
         id: 0,
         coverImg: "https://img.freepik.com/premium-photo/happy-woman-sitting-car-traveling-summer-season-sea-resting-special-day-vacation_36577-127.jpg?w=2000",
@@ -17,6 +17,10 @@ export default [
         coverImg: "https://img.freepik.com/premium-photo/happy-woman-sitting-car-traveling-summer-season-sea-resting-special-day-vacation_36577-127.jpg?w=2000",
         title: "Goa Trip",
         category: "Travel",
-        content: "Goa is the best place to visit in summers"
+        content: `Goa is the best place to visit in summers`
     }
 ]
+
+// export default {
+//     data,
+// }

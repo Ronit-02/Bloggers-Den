@@ -1,6 +1,6 @@
 import '../../styles/hero.css'
 import Card from '../../components/card'
-import data from '../../components/data'
+import {data} from '../../components/data'
 
 export default function posts() {
 

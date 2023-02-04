@@ -1,6 +1,5 @@
 import '../styles/card.css'
 import PropTypes from 'prop-types'
-import BlogPage from '../pages/blogPage/blogPage'
 
 export default function Card({id, img, category, title, content}) {
 
