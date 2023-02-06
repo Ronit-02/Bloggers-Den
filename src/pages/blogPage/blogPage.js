@@ -21,7 +21,7 @@ export default function BlogPage() {
 
 
         <div className="blogpost__content">
-          <img src={data[id].coverImg} alt="blogpostimage" className="blogpost__image" />
+          <img src={`/images/blog/${data[id].coverImg}`} alt="blogpostimage" className="blogpost__image" />
           
           {data[id].content}
 

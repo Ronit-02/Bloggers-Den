@@ -8,6 +8,7 @@ export default function posts() {
 
     return(
       <Card
+        key = {item.id}
         id = {item.id}
         img = {item.coverImg}
         category = {item.category}

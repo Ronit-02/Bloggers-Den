@@ -41,6 +41,9 @@ export default function Navbar() {
                     <Link to="/write">Write</Link>
                 </li>
                 <li>
+                    <Link to="/news">News</Link>
+                </li>
+                <li>
                     <Link to="/login">Logout</Link>
                 </li>
             </ul>

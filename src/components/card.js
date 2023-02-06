@@ -8,12 +8,12 @@ export default function Card({id, img, category, title, content}) {
         <a className='scale__mask' href={`blogpage/${id}`}>
           <img 
               className='card__img'
-              src={img}
+              src={`/images/blog/${img}`}
               width='300px'
               alt='prop'
           />
         </a>
-        <span className='card__cat'>{category}</span>
+        {category &&  <span className='card__cat'>{category}</span>}
         <span className='card__title'>{title}</span>
         <p className='card__content'>{content}</p>
 

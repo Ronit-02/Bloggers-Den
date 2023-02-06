@@ -1,14 +1,14 @@
 .write {
     position: relative;
-    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
     min-height: calc(100vh - 280px);
+    width: 60%;
 }
 
 .write__form {
     width: 60%;
-    margin: 0 auto 50px;
-    display: flex;
-    flex-direction: column;
     font-size: 20px;
 }
 
@@ -32,7 +32,6 @@
     color: var(--color--CHARCOAL-700);
     border-style: none;
     max-height: 200px;
-    border: dashed black;
 }
 
 .write__title:focus, .write__text:focus {
@@ -59,15 +58,21 @@
     right: 80px;
 }
 
-.write__transform > * {
+.write__transform {
+    align-self: flex-start;
+}
+
+.write__transform button {
     margin-left: 20px;
 }
 
 .write__button--upper {
+    text-transform: uppercase;
     background-color: var(--color--BLUE-700) !important;
 }
 
 .write__button--lower {
+    text-transform: lowercase;
     background-color: var(--color--BLUE-700) !important;
 }
 
@@ -76,6 +81,6 @@
 }
 
 .write__info {
-    margin: 20px 0;
+    margin: 20px 0 20px 20px;
     font-size: 1.3rem;
 }
