@@ -22,8 +22,8 @@ export default function footer() {
 
         <div className="footer__container">
           <h1 className='footer__heading'>Get Help</h1>
-          <p className='footer__value'>Help Docs</p>
-          <p className='footer__value'>Developers</p>
+          <a href='help' className='footer__value'>Help Docs</a>
+          <a href='dev' className='footer__value'>Developers</a>
         </div>
       </div>
 

@@ -3,49 +3,51 @@ import { useState } from 'react';
 
 
 export default function Write() {
-  
-    const [text, setText] = useState("");
-    let words = text.split(" ").length;
 
-    const handleOnChange = (event) => {
-        setText(event.target.value);
-    }
+  const [text, setText] = useState("");
+  let words = text.split(" ").length;
 
-    const upperCase = () => {
-        let newText = text.toUpperCase();
-        setText(newText);
-    }
+  const handleOnChange = (event) => {
+    setText(event.target.value);
+  }
 
-    const lowerCase = () => {
-        let newText = text.toLowerCase();
-        setText(newText);
-    }
+  const upperCase = () => {
+    let newText = text.toUpperCase();
+    setText(newText);
+  }
 
-    return (
+  const lowerCase = () => {
+    let newText = text.toLowerCase();
+    setText(newText);
+  }
+
+  return (
     <div className='write'>
-      
-        <form className='write__form'>
-            <input className='write__title' type="text" placeholder='Title'/>
-            <textarea className='write__text' type="text" placeholder='Tell me your story...' rows="8" value={text} onChange={handleOnChange}/>
-            <button className="write__button write__publish">Publish</button>
-        </form>
 
-        {/* Display only when there's text inside */}
-        { text && 
-        <div>
-            <div className="write__transform">
-                <button className="write__button write__button--upper" onClick={upperCase}>Uppercase</button>
-                <button className="write__button write__button--lower" onClick={lowerCase}>Lowercase</button>
+      <form className='write__form'>
+        <input className='write__title' type="text" placeholder='Title' />
+        <textarea className='write__text' type="text" placeholder='Tell me your story...' rows="8" value={text} onChange={handleOnChange} />
+      </form>
+
+      {/* Display only when there's text inside */}
+      {text &&
+        <>
+          <div className="write__button">
+            <div className="write__button--transform">
+              <button onClick={upperCase}>UPPERCASE</button>
+              <button onClick={lowerCase}>lowercase</button>
             </div>
-            <div className="write__info">
-                <h3>Analytics</h3>
-                <p>
-                    This story consists of <b>{words}</b> and it will take <b>{0.08 * words}</b> min to read
-                </p>
+            <div>
+              <button className="write__button--publish">Publish</button>
             </div>
-        </div>
-        }
+          </div>
+
+          <div className="write__info">
+            {words} words, {Math.floor(0.08 * words)} mins read
+          </div>
+        </>
+      }
 
     </div>
-    )
+  )
 }

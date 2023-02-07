@@ -1,0 +1,14 @@
+.news {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.news__header{
+    color: var(--color--BLUE-400);
+}
+
+.news__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

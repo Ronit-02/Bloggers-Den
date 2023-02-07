@@ -1,0 +1,21 @@
+.newsitem {
+    width: 30%;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.newsitem h1 {
+    margin: 5px;
+    font-size: 1.2rem;
+}
+.newsitem img {
+    width: 100%;
+}
+
+.newsitem__button {
+    background-color: var(--color--BLUE-600);
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+
+}
