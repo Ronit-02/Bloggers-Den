@@ -3,23 +3,13 @@ import '../../styles/contact.css'
 
 export default function Contact() {
 
-  function clearError() {
-    
-  }
+  // function formValidation(){
+  //   let returnVal = true;  
+  //   let name = document.forms['contactForm']['fname'].value;
+  //   console.log(name);
 
-  function setError() {
-
-  }
-
-  function formValidation(){
-    let returnVal = true;
-    
-    let name = document.forms['contactForm']['fname'].value;
-    console.log(name);
-
-    return returnVal;
-
-  }
+  //   return returnVal;
+  // }
 
   return (
     <div className='container'>
@@ -40,7 +30,7 @@ export default function Contact() {
 
       <div>
 
-        <form action='' name='contactForm' onSubmit={false} className='contact__form' method='POST'>
+        <form action='' name='contactForm'  className='contact__form' method='POST'>
          
           <fieldset className='name'>
             <div className="fname">

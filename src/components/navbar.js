@@ -2,7 +2,7 @@ import '../styles/navbar.css'
 
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import {BsFacebook, BsInstagram, BsTwitter, BsSearch} from 'react-icons/bs'
+import {BsSearch} from 'react-icons/bs'
 
 export default function Navbar(props) {
 
@@ -21,9 +21,7 @@ export default function Navbar(props) {
     <div className={`navbar-${theme} navbar`}>
         
         <div className='navbar__left'>
-            {/* <BsFacebook className='navbar__logo'/>
-            <BsInstagram className='navbar__logo'/>
-            <BsTwitter className='navbar__logo'/> */}
+
         </div>
 
         <div className='navbar__center'>

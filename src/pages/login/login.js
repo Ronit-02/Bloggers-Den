@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 import {BsFacebook} from 'react-icons/bs'
 import {AiFillRocket} from 'react-icons/ai'
 
-import Register from './register'
-
 export default function Login(props) {
   return (
     <div className='login'>
