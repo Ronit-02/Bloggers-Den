@@ -13,34 +13,40 @@ import Footer from './components/footer'
 import NotFound from './components/notFound'
 
 import {Route, Routes} from "react-router-dom"
+import { useState } from 'react';
 
 function App() {
 
-  const user = true;
+  const [user, setUser] = useState(false);
+
+  function toggleUser(){
+    setUser(prevUser => !prevUser);
+  }
 
   return (
     <div className='app'>
     
-    {
-    user 
-    
+    { user 
+
     ? <>
-    <Navbar />
+    <Navbar toggleUser={toggleUser}/>
     <Routes>
       <Route path="/" element={ <Home />} />
-      <Route path="/blogpage/:id" element={ <BlogPage />} />
       <Route path="/about" element={ <About />} />
       <Route path="/contact" element={ <Contact />} />
       <Route path="/write" element={ <Write />} />
-      <Route path="/login" element={ <Login />} />
-      <Route path="/register" element={ <Register />} />
+      <Route path="/blogpage/:id" element={ <BlogPage />} />
       <Route path="/news" element={ <News />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
     <Footer />
     </>
     
-    : <Login />
+    : 
+    <Routes>
+      <Route path="/" element={ <Login toggleUser={toggleUser}/>} />
+      <Route path="/register" element={ <Register />} />
+    </Routes>
     }
 
     </div>

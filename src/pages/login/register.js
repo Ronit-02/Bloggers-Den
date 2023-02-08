@@ -15,7 +15,7 @@ export default function register() {
         <div className='register__account'>
             <p>Already have an account?</p>
             <span>
-                <Link to="/login" >Login</Link>
+                <Link to="/" >Login</Link>
             </span>
         </div>
 

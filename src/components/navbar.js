@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {BsFacebook, BsInstagram, BsTwitter, BsSearch} from 'react-icons/bs'
 
-export default function Navbar() {
+export default function Navbar(props) {
 
     const [theme, setTheme] = useState("light");
 
@@ -44,7 +44,7 @@ export default function Navbar() {
                     <Link to="/news">News</Link>
                 </li>
                 <li>
-                    <Link to="/login">Logout</Link>
+                    <span onClick={() => props.toggleUser()}><Link to="/">Logout</Link></span>
                 </li>
             </ul>
         </div>

@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom'
 import {BsFacebook} from 'react-icons/bs'
 import {AiFillRocket} from 'react-icons/ai'
 
-export default function Login() {
+import Register from './register'
+
+export default function Login(props) {
   return (
     <div className='login'>
       
@@ -31,7 +33,7 @@ export default function Login() {
         </div>
 
         <input type="text"></input>
-        <button className="login__submit">Login</button>
+        <button className="login__submit" onClick={() => props.toggleUser()}>Login</button>
       </form>
 
       <div className="login__register">

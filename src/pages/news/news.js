@@ -7,7 +7,6 @@ export default class news extends Component {
 
   constructor() {
     super();
-    console.log("Hello this is constructor");
     this.state = {
       loading: false
     }

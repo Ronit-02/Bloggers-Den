@@ -52,3 +52,13 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
+
+.card__show {
+    /* max-width: 80px; */
+    /* color: white; */
+    color: var(--color--BLUE-500);
+    border: none;
+    /* border-radius: 5px; */
+    /* padding: 5px; */
+    cursor: pointer;
+}
