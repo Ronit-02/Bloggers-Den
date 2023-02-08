@@ -52,9 +52,9 @@ export default function Navbar() {
         <div className='navbar__right'>
             <img className='navbar__profile' src='/images/profile.jpg' alt='profile pic'/>
             <BsSearch className='navbar__logo' />
-            <label class="switch">
+            <label className="switch">
                 <input type="checkbox" onClick={toggleTheme}/>
-                <span class="slider round" ></span>
+                <span className="slider round" ></span>
             </label>
         </div>
     </div>

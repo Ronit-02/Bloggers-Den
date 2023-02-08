@@ -9,6 +9,7 @@
 
 .write * {
     font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 1px;
 }
 
 .write__form {

@@ -6,11 +6,12 @@ export default function Write() {
 
   const [text, setText] = useState("");
   let words = text.split(" ").length;
-
+  const time = (0.08 * words).toFixed(1);
+  
   const handleOnChange = (event) => {
     setText(event.target.value);
   }
-
+  
   const upperCase = () => {
     let newText = text.toUpperCase();
     setText(newText);
@@ -19,6 +20,10 @@ export default function Write() {
   const lowerCase = () => {
     let newText = text.toLowerCase();
     setText(newText);
+  }
+
+  const clear = () => {
+    setText('');
   }
 
   return (
@@ -36,6 +41,7 @@ export default function Write() {
             <div className="write__button--transform">
               <button onClick={upperCase}>UPPERCASE</button>
               <button onClick={lowerCase}>lowercase</button>
+              <button onClick={clear}>Clear</button>
             </div>
             <div>
               <button className="write__button--publish">Publish</button>
@@ -43,7 +49,7 @@ export default function Write() {
           </div>
 
           <div className="write__info">
-            {words} words, {Math.floor(0.08 * words)} mins read
+            {words} words, {time} mins read
           </div>
         </>
       }
