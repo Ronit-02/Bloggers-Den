@@ -11,43 +11,47 @@ import Write from './pages/write/write'
 import News from './pages/news/news';
 import Footer from './components/footer'
 import NotFound from './components/notFound'
+import Social from './components/social';
 
 import {Route, Routes} from "react-router-dom"
 import { useState } from 'react';
 
 function App() {
 
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
 
   function toggleUser(){
-    setUser(prevUser => !prevUser);
+    console.log(user);
+    setUser(!user);
+    console.log(user);
   }
 
   return (
     <div className='app'>
     
-    { user 
+      { user 
 
-    ? <>
-    <Navbar toggleUser={toggleUser}/>
-    <Routes>
-      <Route path="/" element={ <Home />} />
-      <Route path="/about" element={ <About />} />
-      <Route path="/contact" element={ <Contact />} />
-      <Route path="/write" element={ <Write />} />
-      <Route path="/blogpage/:id" element={ <BlogPage />} />
-      <Route path="/news" element={ <News />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-    <Footer />
-    </>
-    
-    : 
-    <Routes>
-      <Route path="/" element={ <Login toggleUser={toggleUser}/>} />
-      <Route path="/register" element={ <Register />} />
-    </Routes>
-    }
+      ? <>
+      <Navbar toggleUser={toggleUser}/>
+      <Routes>
+        <Route path="/" element={ <Home />} />
+        <Route path="/about" element={ <About />} />
+        <Route path="/contact" element={ <Contact />} />
+        <Route path="/write" element={ <Write />} />
+        <Route path="/blogpage/:id" element={ <BlogPage />} />
+        <Route path="/news" element={ <News />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+      <Social />
+      </>
+      
+      : 
+      <Routes>
+        <Route path="/" element={ <Login toggleUser={toggleUser}/>} />
+        <Route path="/register" element={ <Register />} />
+      </Routes>
+      }
 
     </div>
   );

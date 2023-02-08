@@ -33,8 +33,8 @@ export default function Login(props) {
         </div>
 
         <input type="text"></input>
-        <button className="login__submit" onClick={() => props.toggleUser()}>Login</button>
       </form>
+      <button className="login__submit" onClick={() => props.toggleUser()}>Login</button>
 
       <div className="login__register">
         <p>Don't have an account? </p>

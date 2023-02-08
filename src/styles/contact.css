@@ -47,23 +47,9 @@
     height: 200px;
 }
 
-.contact__form {
-    border: none;    
-    font-weight: 500;
-}
-
 .contact__form fieldset {
     border: none;
     width: 100%;
-}
-
-.contact__name {
-    display: flex;
-    justify-content: space-around;
-}
-
-.contact__firstname, .contact__lastname {
-    width: 49%;
 }
 
 .contact__form input, textarea {
@@ -76,12 +62,17 @@
     margin: 10px 0;
 }
 
-.error-msg {
-    display: none;
+.name {
+    display: flex;
+    justify-content: space-around;
 }
 
-.contact__name {
-    display: flex;
+.fname, .lname {
+    width: 49%;
+}
+
+.error-msg {
+    display: none;
 }
 
 .contact__submit {

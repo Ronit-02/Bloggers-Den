@@ -21,9 +21,9 @@ export default function Navbar(props) {
     <div className={`navbar-${theme} navbar`}>
         
         <div className='navbar__left'>
-            <BsFacebook className='navbar__logo'/>
+            {/* <BsFacebook className='navbar__logo'/>
             <BsInstagram className='navbar__logo'/>
-            <BsTwitter className='navbar__logo'/>
+            <BsTwitter className='navbar__logo'/> */}
         </div>
 
         <div className='navbar__center'>

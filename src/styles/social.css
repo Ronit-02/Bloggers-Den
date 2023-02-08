@@ -1,0 +1,50 @@
+.social {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.social__button {
+    font-size: 2rem;
+    padding: 5px;
+    border-radius: 50px;
+    display: flex;
+    cursor: pointer;
+}
+
+.social__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social__icon > * {
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.social__icon--fb, .social__icon--in, .social__icon--tw {
+    width: 40px;
+    height: 40px;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social__icon--fb {
+    background-color: #3b5998;
+}
+
+.social__icon--in {
+    background-color: #E1306c;
+}
+
+.social__icon--tw {
+    background-color: #00acee;
+}
