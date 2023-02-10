@@ -75,6 +75,20 @@
     display: none;
 }
 
+.verify {
+    display: flex;
+    align-items: center;
+}
+
+.verify input {
+    width: 20px;
+    cursor: pointer;
+}
+
+.verify label {
+    margin-left: 10px;
+}
+
 .contact__submit {
     margin-top: 10px;
     padding: 20px 60px;

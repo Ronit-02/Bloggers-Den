@@ -33,24 +33,24 @@ export default function register() {
         <div className="register__form__name">
             <div>
                 <label required>First Name</label>
-                <input type="text" autoFocus={true}></input>
+                <input type="text" autoFocus={true} />
             </div>
             <div>
                 <label>Last Name</label>
-                <input type="text"></input>
+                <input type="text" />
             </div>
         </div>
 
         <label required>Email</label>
-        <input type="text"></input>
+        <input type="text" />
 
         <label required>Username</label>
         <span className='register__form--light'>(only letters, numbers, and underscores)</span>
-        <input type="text"></input>
+        <input type="text" />
 
         <label>Password</label>
         <span className='register__form--light'>(min. 8 char)</span>
-        <input type="text"></input>
+        <input type="text" />
         
         <button className="register__submit">Join</button>
       </form>

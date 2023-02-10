@@ -23,14 +23,14 @@ export default function Login(props) {
 
       <form action="" className="login__form">
         <label required>Email</label>
-        <input type="text" autoFocus={true}></input>
+        <input type="text" autoFocus={true} />
 
         <div className="login__forgot">
           <label>Password</label>
           <a href='forgot'>Forgot your Password?</a>
         </div>
 
-        <input type="text"></input>
+        <input type="text" />
       </form>
       <button className="login__submit" onClick={() => props.toggleUser()}>Login</button>
 
