@@ -21,9 +21,7 @@ function App() {
   const [user, setUser] = useState(true);
 
   function toggleUser(){
-    console.log(user);
     setUser(!user);
-    console.log(user);
   }
 
   return (
