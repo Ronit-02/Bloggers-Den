@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import NewsItem from './newsItem'
 import '../../styles/news.css'
+
 import { newsData } from '../../components/newsData';
+import NewsItem from './newsItem'
 
 export default class news extends Component {
 
@@ -12,6 +13,15 @@ export default class news extends Component {
     }
   }
 
+  // const newsElement = newsData.map((item) => {
+  //   return (
+  //     <NewsItem
+  //       key = {item.url}
+  //       item = {item}
+  //     />
+  //   )
+  // })
+
   render() {
     return (
       <div className='news'>
@@ -19,13 +29,11 @@ export default class news extends Component {
 
         <div className="news__content">
 
-          {newsData.map((element) => {
+          {newsData.map((item) => {
             return (
               <NewsItem
-                img={element.urlToImage}
-                title={element.title}
-                description={element.description}
-                url = {element.url}
+                key = {item.url}
+                item = {item}
               />
             )
           })}

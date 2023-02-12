@@ -1,21 +1,25 @@
-.newsitem {
-    width: 30%;
-    margin: 20px;
-    overflow: hidden;
-}
-
 .newsitem h1 {
     margin: 5px;
     font-size: 1.2rem;
 }
 .newsitem img {
+    height: 200px;
     width: 100%;
+    object-fit: cover;
 }
 
 .newsitem__button {
     background-color: var(--color--BLUE-600);
     color: white;
-    padding: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 500;
     border-radius: 4px;
+    cursor: pointer;
+}
 
+.newsitem__button:hover {
+    background-color: var(--color--BLUE-700);
 }
