@@ -8,13 +8,9 @@ export default class newsItem extends Component {
 
     return (
       <div className='newsitem'>
-        <img src={urlToImage} alt="news"/>
-        <h1>
-          {title.length > 60 ? `${title.slice(0,60)}  ..` : title}
-        </h1>
-        <p>
-          {description.length > 110 ? `${description.slice(0,110)}  ..` : description}
-        </p>
+        <img src={urlToImage ? urlToImage : "https://cdn.biziday.ro/wp-content/uploads/2022/06/petrol-electric-masini.jpg"} alt="news"/>
+        <h1>{title}</h1>
+        <p>{description}</p>
         <form target="_blank" action={url}>
           <button className='newsitem__button'>Read More</button>
         </form>

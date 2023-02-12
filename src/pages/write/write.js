@@ -12,7 +12,6 @@ export default function Write() {
     localStorage.setItem('blog', JSON.stringify(blog))
   }, [blog])
 
-
   const title = blog.title
   const story = blog.story
 
