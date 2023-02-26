@@ -6,24 +6,25 @@ export default function footer() {
   return (
     <div className='footer'>
 
-      <div className="footer__content">
+      <div className="footer__main">
+
         <h1 className='footer__title'>Bloggers Den</h1>
 
-        <div className="footer__container">
-          <h1 className='footer__heading'>Company</h1>
-          <a href='about' className='footer__value'>About Us</a>
-          <a href='careers' className='footer__value'>Careers</a>
+        <div className="footer__column">
+          <h1 className='footer__column--title'>Company</h1>
+          <a href='about' className='footer__column--value'>About Us</a>
+          <a href='careers' className='footer__column--value'>Careers</a>
         </div>
 
-        <div className="footer__container">
-          <h1 className='footer__heading'>Contact</h1>
-          <a href='ronit' className='footer__value'>Ronit Khatri</a>
+        <div className="footer__column">
+          <h1 className='footer__column--title'>Contact</h1>
+          <a href='ronit' className='footer__column--value'>Ronit Khatri</a>
         </div>
 
-        <div className="footer__container">
-          <h1 className='footer__heading'>Get Help</h1>
-          <a href='help' className='footer__value'>Help Docs</a>
-          <a href='dev' className='footer__value'>Developers</a>
+        <div className="footer__column">
+          <h1 className='footer__column--title'>Get Help</h1>
+          <a href='help' className='footer__column--value'>Help Docs</a>
+          <a href='dev' className='footer__column--value'>Developers</a>
         </div>
       </div>
 

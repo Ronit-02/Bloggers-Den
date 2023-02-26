@@ -12,7 +12,7 @@ export default class news extends Component {
 
   async componentDidMount() {
     try{        
-      const url = `https://newsapi.org/v2/everything?q=football&from=2023-01-12&sortBy=publishedAt&apiKey=365fc97dd10441989d8dd9025d84517b&page=1&pageSize=20&language=en`;
+      const url = `https://newsapi.org/v2/everything?q=football&sortBy=publishedAt&apiKey=365fc97dd10441989d8dd9025d84517b&page=1&pageSize=20&language=en`;
       const data = await fetch(url);
       const parsedData = await data.json();
       this.setState({
@@ -26,7 +26,7 @@ export default class news extends Component {
   }
 
   handleClickPrevious = async () => {
-    const url = `https://newsapi.org/v2/everything?q=football&from=2023-01-12&sortBy=publishedAt&apiKey=365fc97dd10441989d8dd9025d84517b&page=${this.state.page - 1}&pageSize=20&language=en`;
+    const url = `https://newsapi.org/v2/everything?q=football&sortBy=publishedAt&apiKey=365fc97dd10441989d8dd9025d84517b&page=${this.state.page - 1}&pageSize=20&language=en`;
     const data = await fetch(url);
     const parsedData = await data.json();
     this.setState({
@@ -36,7 +36,7 @@ export default class news extends Component {
   }
 
   handleClickNext = async () => {
-    const url = `https://newsapi.org/v2/everything?q=football&from=2023-01-12&sortBy=publishedAt&apiKey=365fc97dd10441989d8dd9025d84517b&page=${this.state.page + 1}&pageSize=20&language=en`;
+    const url = `https://newsapi.org/v2/everything?q=football&sortBy=publishedAt&apiKey=365fc97dd10441989d8dd9025d84517b&page=${this.state.page + 1}&pageSize=20&language=en`;
     const data = await fetch(url);
     const parsedData = await data.json();
     this.setState(prevState => {
@@ -65,7 +65,7 @@ export default class news extends Component {
       <div className='news'>
         <h1 className='news__header'>Football Latest News</h1>
         <div className="news__content">
-          {newsElement}
+          {newsElement || "Loading..."}
         </div>
         <div className="news__pages">
           {this.state.page > 1 ? 

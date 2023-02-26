@@ -1,24 +1,17 @@
 import '../styles/navbar.css'
 
-import { useState } from 'react'
 import { Link, NavLink} from 'react-router-dom'
 import { BsSearch } from 'react-icons/bs'
+import {GiHamburgerMenu} from 'react-icons/gi'
+import {RxCross2} from 'react-icons/rx'
+import { useState } from 'react'
 
 export default function Navbar(props) {
 
-    const [theme, setTheme] = useState("light");
-
-    const toggleTheme = () => {
-        if (theme === 'light') {
-            setTheme("dark")
-        }
-        else {
-            setTheme("light")
-        }
-    };
+    const [hamburger, setHamburger] = useState(() => false);
 
     return (
-        <div className={`navbar-${theme} navbar`}>
+        <nav className="navbar">
 
             <div className='navbar__left'>
                 <h2>Bloggers Den</h2>
@@ -62,10 +55,28 @@ export default function Navbar(props) {
                 <img className='navbar__profile' src='/images/profile.jpg' alt='profile pic' />
                 <BsSearch className='navbar__logo' />
                 <label className="switch">
-                    <input type="checkbox" onClick={toggleTheme} />
+                    <input type="checkbox" onClick={() => props.toggleTheme()} />
                     <span className="slider round" ></span>
                 </label>
             </div>
+
+            <span className='hamburger' onClick={() => setHamburger((prevState) => !prevState)}>
+                <GiHamburgerMenu />
+            </span>
+
+        {hamburger && 
+        <div className='nav__menu'>
+            <RxCross2 className='cross' onClick={() => setHamburger((prevState) => !prevState)}/>
+            <ul>
+                <li><NavLink to="/">Home</NavLink></li>
+                <li><NavLink to="/about">About</NavLink></li>
+                <li><NavLink to="/contact">Contact</NavLink></li>
+                <li><NavLink to="/write"> Write </NavLink></li>
+                <li><NavLink to="/news"> News </NavLink></li>
+            </ul>
         </div>
+        }
+
+        </nav>
     )
 }

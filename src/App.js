@@ -19,18 +19,28 @@ import { useState } from 'react';
 function App() {
 
   const [user, setUser] = useState(true);
+  const [theme, setTheme] = useState("light");
 
   function toggleUser(){
     setUser(!user);
   }
 
+  const toggleTheme = () => {
+    if (theme === 'light') {
+        setTheme("dark")
+    }
+    else {
+        setTheme("light")
+    }
+  };
+
   return (
-    <div className='app'>
+    <div id={`${theme}`}>
     
       { user 
 
       ? <>
-      <Navbar toggleUser={toggleUser}/>
+      <Navbar toggleUser={toggleUser} toggleTheme={toggleTheme}/>
       <Routes>
         <Route path="/" element={ <Home />} />
         <Route path="/about" element={ <About />} />

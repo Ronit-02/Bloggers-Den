@@ -1,5 +1,5 @@
 import '../../styles/blogPage.css'
-import {data} from '../../components/data'
+import { blogData } from '../../components/blogData'
 import { useParams } from 'react-router-dom' 
 
 export default function BlogPage() {
@@ -11,7 +11,7 @@ export default function BlogPage() {
       <div className='blogpost__container'>
 
         <div className="blogpost__header">
-          <h1 className="blogpost__title">{data[id].title}</h1>
+          <h1 className="blogpost__title">{blogData[id].title}</h1>
           <div className="blogpost__extras">
             <img className="blogpost__profile" src='/images/profile.jpg' alt='profile pic' />
             <span className='blogpost__author'>Written by <b>Ronit Khatri</b></span>
@@ -21,9 +21,9 @@ export default function BlogPage() {
 
 
         <div className="blogpost__content">
-          <img src={`/images/blog/${data[id].coverImg}`} alt="blogpostimage" className="blogpost__image" />
+          <img src={`/images/blog/${blogData[id].coverImg}`} alt="blogpostimage" className="blogpost__image" />
           
-          {data[id].content}
+          {blogData[id].content}
 
         </div>
 

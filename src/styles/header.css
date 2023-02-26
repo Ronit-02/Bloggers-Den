@@ -1,6 +1,11 @@
-.header {
+#light .header, #dark .header {
     position: relative;
     margin-top: 40px;
+}
+
+#dark .header {
+    color: white;
+    background-color: var(--color--BLACK);
 }
 
 .header__titles {

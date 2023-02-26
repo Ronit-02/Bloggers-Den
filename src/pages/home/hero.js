@@ -1,10 +1,10 @@
 import '../../styles/hero.css'
 import Card from '../../components/card'
-import {data} from '../../components/data'
+import {blogData} from '../../components/blogData'
 
-export default function posts() {
+export default function Hero() {
 
-  const cards = data.map(item => {
+  const cards = blogData.map(item => {
 
     return(
       <Card
@@ -19,12 +19,12 @@ export default function posts() {
   })
 
   return (
-    <div className='posts'>
-      <div className='posts__title'>
+    <div className="hero">
+      <div className='hero__header'>
         <h3>Some Recent Posts</h3>
         <a href='www.google.com'>View more posts</a>
       </div>
-      <div className='posts__content'>
+      <div className='hero__content'>
         {cards}
       </div>
     </div>

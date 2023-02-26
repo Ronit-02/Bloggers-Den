@@ -1,4 +1,4 @@
-export const data = [
+export const blogData = [
 
     {
         id: 0,
@@ -62,7 +62,6 @@ export const data = [
         id: 3,
         coverImg: "newyork.jpg",
         title: "New York Bridges",
-        category: "",
         content: `
         The University Heights Bridge
         Spans Manhattan to the Bronx crossing the Harlem River.
