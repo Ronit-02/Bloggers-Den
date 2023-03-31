@@ -11,19 +11,15 @@ import Write from './pages/write/write'
 import News from './pages/news/news';
 import Footer from './components/footer'
 import NotFound from './components/notFound'
-import Social from './components/social';
-
-import {Route, Routes} from "react-router-dom"
-import { useState } from 'react';
+// import Social from './components/social';
+import { useContext, useState } from 'react';
+import { Route, Routes } from "react-router-dom"
+import { Context } from './context/Context';
 
 function App() {
 
-  const [user, setUser] = useState(true);
+  const {user} = useContext(Context)
   const [theme, setTheme] = useState("light");
-
-  function toggleUser(){
-    setUser(!user);
-  }
 
   const toggleTheme = () => {
     if (theme === 'light') {
@@ -40,23 +36,25 @@ function App() {
       { user 
 
       ? <>
-      <Navbar toggleUser={toggleUser} toggleTheme={toggleTheme}/>
+      <Navbar theme={theme} toggleTheme={toggleTheme}/>
       <Routes>
         <Route path="/" element={ <Home />} />
         <Route path="/about" element={ <About />} />
         <Route path="/contact" element={ <Contact />} />
         <Route path="/write" element={ <Write />} />
-        <Route path="/blogpage/:id" element={ <BlogPage />} />
+        <Route path="/post/:id" element={ <BlogPage />} />
         <Route path="/news" element={ <News />} />
+        {/* <Route path="/login" element={ <Login />} /> */}
+        {/* <Route path="/register" element={ <Register /> } /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
-      <Social />
+      {/* <Social /> */}
       </>
       
       : 
       <Routes>
-        <Route path="/" element={ <Login toggleUser={toggleUser}/>} />
+        <Route path="/" element={ <Login />} />
         <Route path="/register" element={ <Register />} />
       </Routes>
       }

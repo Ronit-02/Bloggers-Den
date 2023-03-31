@@ -1,10 +1,36 @@
 import '../../styles/login.css'
-import { Link } from 'react-router-dom'
 
+import axios from 'axios'
+import { Context } from '../../context/Context'
+import { Link } from 'react-router-dom'
+import { useRef, useContext } from 'react'
 import {BsFacebook} from 'react-icons/bs'
 import {AiFillRocket} from 'react-icons/ai'
 
 export default function Login(props) {
+
+  const userRef = useRef()
+  const passwordRef = useRef()
+  const {dispatch, isFetching} = useContext(Context)
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    dispatch({ type: "LOGIN_START" })
+    try {
+      const res = await axios.post("/auth/login", {
+        username: userRef.current.value,
+        password: passwordRef.current.value
+      })
+
+      dispatch({ type: "LOGIN_SUCCESS", payload: res.data })
+    }
+    catch(err) {
+      dispatch({ type: "LOGIN_FAILURE" })
+    }
+  } 
+
+  // console.log(isFetching)
+
   return (
     <div className='login'>
       
@@ -22,17 +48,17 @@ export default function Login(props) {
       <p className='login__separator'>or</p>
 
       <form action="" className="login__form">
-        <label required>Email</label>
-        <input type="text" autoFocus={true} />
+        <label required>Username</label>
+        <input type="text" ref={userRef} autoFocus={true} />
 
         <div className="login__forgot">
           <label>Password</label>
           <a href='forgot'>Forgot your Password?</a>
         </div>
+        <input type="password" ref={passwordRef} />
 
-        <input type="text" />
+        <button className="login__submit" onClick={handleSubmit} disabled={isFetching}>Login</button>
       </form>
-      <button className="login__submit" onClick={() => props.toggleUser()}>Login</button>
 
       <div className="login__register">
         <p>Don't have an account? </p>

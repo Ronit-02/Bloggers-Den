@@ -1,82 +1,103 @@
 import '../styles/navbar.css'
 
-import { Link, NavLink} from 'react-router-dom'
-import { BsSearch } from 'react-icons/bs'
-import {GiHamburgerMenu} from 'react-icons/gi'
-import {RxCross2} from 'react-icons/rx'
-import { useState } from 'react'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { RxCross2 } from 'react-icons/rx'
+import { BiSun, BiMoon } from 'react-icons/bi'
+import { useContext, useEffect, useState } from 'react'
+import { Context } from '../context/Context'
+import Navlinks from './navlinks'
+import { Link } from 'react-router-dom'
 
 export default function Navbar(props) {
 
     const [hamburger, setHamburger] = useState(() => false);
 
-    return (
-        <nav className="navbar">
+    const {username} = JSON.parse(localStorage.getItem("user"))
+    // console.log(username)
 
-            <div className='navbar__left'>
-                <h2>Bloggers Den</h2>
-            </div>
+    const {dispatch} = useContext(Context)
+    const handleLogout =() =>{
+        dispatch({ type: "LOGOUT"} )
+    }   
 
-            <div className='navbar__center'>
-                <NavLink 
-                    to="/" 
-                    className={ ({isActive}) => (isActive ? "activeLink" : "")}>
-                    Home
-                </NavLink>
-                <NavLink 
-                    to="/about"
-                    className={ ({isActive}) => (isActive ? "activeLink" : "")}>
-                    About
-                </NavLink>
-                <NavLink 
-                    to="/contact"
-                    className={ ({isActive}) => (isActive ? "activeLink" : "")}>
-                    Contact
-                </NavLink>
-                <NavLink 
-                    to="/write"
-                    className={ ({isActive}) => (isActive ? "activeLink" : "")}>
-                    Write
-                </NavLink>
-                <NavLink 
-                    to="/news"
-                    className={ ({isActive}) => (isActive ? "activeLink" : "")}>
-                    News
-                </NavLink>
-                <span onClick={() => props.toggleUser()}>
-                    <Link 
-                        to="/">
-                        Logout
-                    </Link>
-                </span>
-            </div>
-
-            <div className='navbar__right'>
-                <img className='navbar__profile' src='/images/profile.jpg' alt='profile pic' />
-                <BsSearch className='navbar__logo' />
-                <label className="switch">
-                    <input type="checkbox" onClick={() => props.toggleTheme()} />
-                    <span className="slider round" ></span>
-                </label>
-            </div>
-
-            <span className='hamburger' onClick={() => setHamburger((prevState) => !prevState)}>
-                <GiHamburgerMenu />
-            </span>
-
-        {hamburger && 
-        <div className='nav__menu'>
-            <RxCross2 className='cross' onClick={() => setHamburger((prevState) => !prevState)}/>
-            <ul>
-                <li><NavLink to="/">Home</NavLink></li>
-                <li><NavLink to="/about">About</NavLink></li>
-                <li><NavLink to="/contact">Contact</NavLink></li>
-                <li><NavLink to="/write"> Write </NavLink></li>
-                <li><NavLink to="/news"> News </NavLink></li>
-            </ul>
-        </div>
+    useEffect(()=>{
+        const navbar = document.querySelector(".navbar")
+        function stickynavbar() {
+            if (window.scrollY >= 200) {    
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');    
+            }
         }
+        window.addEventListener('scroll', stickynavbar);
 
-        </nav>
+        // function closeOpenMenus() {
+        //     setDropDown(false)
+        // }
+        // document.addEventListener('mousedown',closeOpenMenus)
+    })
+
+    if(hamburger) {
+        document.body.style.overflow = "hidden"
+    }
+    else{
+        document.body.style.overflow = ""
+    }
+
+
+    return (
+        <div>
+            <nav className="navbar">
+
+                <div className='navbar__left'>
+                    <Link to="/" > Bloggers Den </Link>
+                </div>
+
+                <div className='navbar__center'>
+                    <Navlinks />
+                </div>
+
+                <div className='navbar__right'>
+                    <div className='dropdown'>
+                        <img 
+                            className='navbar__profile' src='/images/profile.jpg' alt='profile pic' 
+                            // onClick={() => setDropDown(true)} 
+                            />
+                        <div className='dropdown__content'>
+                            <ul>    
+                                <li>Profile</li>
+                                <li>Settings</li>
+                                <li onClick={handleLogout}>Logout</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className='nav__logo' onClick={() => props.toggleTheme()}>
+                        {props.theme === "dark" ? <BiSun /> : <BiMoon />}
+                    </div>
+                    <div className='nav__logo hamburger__logo' onClick={() => setHamburger((prevState) => !prevState)}>
+                        {hamburger ? <RxCross2 /> : <GiHamburgerMenu />}
+                    </div>
+                </div>
+            </nav>
+
+            {hamburger && 
+            <>
+            <div className='sidenav__bgd' onClick={() => setHamburger(false)}></div>
+            <div className='hamburger'>
+                <div className='profile'>
+                    <RxCross2 className="nav__logo" onClick={() => setHamburger((prevState) => !prevState)}/>
+                    <img src='/images/profile.jpg' alt='profile pic' />
+                    <h2>{username}</h2>
+                </div>
+                <Navlinks open={hamburger} />
+                <div className="hamburger__buttons">
+                    {/* <button className="hamburger__login">Login</button>
+                    <button className="hamburger__register">Get Started</button> */}
+                </div>
+            </div>
+            </>
+            }
+
+        </div>
     )
 }

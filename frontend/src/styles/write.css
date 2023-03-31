@@ -4,7 +4,7 @@
     flex-direction: column;
     margin: 30px auto;
     min-height: calc(100vh - 100px);
-    width: 60%;
+    width: 70%;
 }
 
 .write * {
@@ -30,9 +30,22 @@
     font-weight: bold;
 }
 
+.write__file {
+    padding: 5px 10px;
+    border-radius: 100%;
+    color: white;
+    background-color: #084cdf;
+    cursor: pointer;
+    width: 10px;
+}
+
 .write__text {
     font-size: 1.2rem;
-    width: 100%;
+    width: 90%;
+}
+
+.write__file:hover {
+    background-color: #2c5ecb;
 }
 
 .write__title:focus, .write__text:focus {
@@ -70,4 +83,9 @@
     right: 0;
     margin: 40px 0;
     font-size: 1rem;
+}
+
+.write__img {
+    width: 80%;
+    margin: auto;
 }

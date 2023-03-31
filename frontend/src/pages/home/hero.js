@@ -1,19 +1,21 @@
 import '../../styles/hero.css'
+
 import Card from '../../components/card'
-import {blogData} from '../../components/blogData'
 
-export default function Hero() {
+export default function Hero({post}) {
 
-  const cards = blogData.map(item => {
+  const PF = "http://localhost:5000/uploads/";  
+
+  const cards = post.map(item => {
 
     return(
       <Card
-        key = {item.id}
-        id = {item.id}
-        img = {item.coverImg}
-        category = {item.category}
+        key = {item._id}
+        id = {item._id}
         title = {item.title}
-        content = {item.content}
+        category = {item.categories}
+        content = {item.desc}
+        img = {PF + item.photo}
       />
     )
   })

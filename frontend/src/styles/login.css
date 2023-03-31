@@ -79,6 +79,11 @@
     cursor: pointer;
 }
 
+.login__submit:disabled {
+    background-color: rgb(40, 40, 40);
+    cursor: not-allowed;
+}
+
 .login__register {
     border: solid 1px black;
     width: 100%;

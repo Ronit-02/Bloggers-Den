@@ -5,6 +5,7 @@
 }
 
 .scale__mask {
+    width: 100%;
     border-radius: 4px;
     overflow: hidden;
 }
@@ -12,21 +13,27 @@
 .card__img {
     position: relative;
     width: 100%;
-    height: auto;
     cursor: pointer;
     object-fit: cover;
     transition: transform 0.25s ease linear;
 }
 
 .card__img:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
+}
+
+.card__body {
+    position: relative;
 }
 
 .card__category {
+    position: absolute;
+    top: 0;
+    right: 0;
     margin-left: auto;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin-top: 5px;
     color: var(--color--BLUE-500);
 }
@@ -36,12 +43,12 @@
 }
 
 .card__title {
-    margin-bottom: 5px;
+    margin-top: 10px;
     color: var(--color--CHARCOAL-600);
     font-size: 1.3rem;
     letter-spacing: 1px;
     font-weight: 600;
-    padding: 0 10px;
+    padding: 10px;
 }
 
 #dark .card__content {

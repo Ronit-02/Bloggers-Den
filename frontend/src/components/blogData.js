@@ -6,17 +6,17 @@ export const blogData = [
         title: "Amsterdam Blog",
         category: "Travel",
         content: `
-        Amsterdam is the capital of the Netherlands, and one of the most popular tourist destinations in all of Europe. The city is well-known for its past, the elaborate canal system and the architecture of their iconic, narrow houses. 
-        Amsterdam offers way more than just cheap thrills! You can wander the sidewalks (by foot, or more popularly, by bike)
-         and explore the Old Centre, Red Light, Dam Square, Grachtengordel and Museum districts. Use my travel tips from this 
-         ultimate Amsterdam travel guide to plan your trip to the Netherlands!
-         Amsterdam has a fascinating history and is part of the reason this city is on so many travelers’ bucket lists. 
-         It’s truly one-of-a-kind and offers so many different kinds of experiences. Here are some things you should 
-         know before traveling to Amsterdam:
+            Amsterdam is the capital of the Netherlands, and one of the most popular tourist destinations in all of Europe. The city is well-known for its past, the elaborate canal system and the architecture of their iconic, narrow houses. 
+            Amsterdam offers way more than just cheap thrills! You can wander the sidewalks (by foot, or more popularly, by bike)
+            and explore the Old Centre, Red Light, Dam Square, Grachtengordel and Museum districts. Use my travel tips from this 
+            ultimate Amsterdam travel guide to plan your trip to the Netherlands!
+            Amsterdam has a fascinating history and is part of the reason this city is on so many travelers’ bucket lists. 
+            It’s truly one-of-a-kind and offers so many different kinds of experiences. Here are some things you should 
+            know before traveling to Amsterdam:
 
-        Language: The official language is Dutch, but nearly everyone speaks English as a second language.
+            Language: The official language is Dutch, but nearly everyone speaks English as a second language.
 
-        Currency: The Euro! Check out my tips for traveling Amsterdam on a budget too!
+            Currency: The Euro! Check out my tips for traveling Amsterdam on a budget too!
         `
     },
     {
@@ -82,7 +82,3 @@ export const blogData = [
         `
     }
 ]
-
-// export default {
-//     data,
-// }
