@@ -14,13 +14,15 @@ export default function Home() {
   useEffect(() => {
 
     const fetchPost = async () => {
-      const res = await axios.get("/posts" + search)
-      // console.log(res)
+      const res = await axios.get("/posts")
+      console.log(res)
       setPost(res.data)
     }
 
     fetchPost() 
-  }, [search])
+  }, [])
+  console.log("hi this is sample stiring")
+
 
   return (
     <div className='home__content'>

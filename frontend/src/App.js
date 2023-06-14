@@ -33,9 +33,9 @@ function App() {
   return (
     <div id={`${theme}`}>
     
-      { user 
+      {/* { user 
 
-      ? <>
+      ? <> */}
       <Navbar theme={theme} toggleTheme={toggleTheme}/>
       <Routes>
         <Route path="/" element={ <Home />} />
@@ -50,14 +50,14 @@ function App() {
       </Routes>
       <Footer />
       {/* <Social /> */}
-      </>
+      {/* </>
       
       : 
       <Routes>
         <Route path="/" element={ <Login />} />
         <Route path="/register" element={ <Register />} />
       </Routes>
-      }
+      } */}
 
     </div>
   );
