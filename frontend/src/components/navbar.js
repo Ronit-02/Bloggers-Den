@@ -12,7 +12,7 @@ export default function Navbar(props) {
 
     const [hamburger, setHamburger] = useState(() => false);
 
-    const {username} = JSON.parse(localStorage.getItem("user"))
+    const {username} = JSON.parse(localStorage.getItem("user")) | null;
     // console.log(username)
 
     const {dispatch} = useContext(Context)

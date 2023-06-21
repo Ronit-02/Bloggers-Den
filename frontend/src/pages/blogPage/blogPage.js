@@ -11,7 +11,7 @@ export default function BlogPage() {
 
   const {id} = useParams()
   const [post, setPost] = useState({})
-  const PF = "http://localhost:5000/uploads/"
+  const PF = "https://bloggersden-backend.onrender.com/uploads/"
   const { user } = useContext(Context)
   const [update, setUpdate] = useState(false)
   const [title, setTitle] = useState("")
