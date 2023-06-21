@@ -8,6 +8,7 @@ const authRoute = require("./routes/auth")
 const userRoute = require("./routes/users")
 const postRoute = require("./routes/posts")
 
+const PORT = process.env.PORT || 5000; 
 dotenv.config();
 app.use(express.json());
 
@@ -44,6 +45,6 @@ app.use("/api/posts", postRoute);
 
 
 // LISTENING
-app.listen("5000", () => {
+app.listen(PORT, () => {
     console.log("Port is running...");
 })
