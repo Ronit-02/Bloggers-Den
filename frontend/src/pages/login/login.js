@@ -11,7 +11,7 @@ export default function Login(props) {
 
   const userRef = useRef()
   const passwordRef = useRef()
-  const {dispatch, isFetching} = useContext(Context)
+  const { dispatch, isFetching } = useContext(Context)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -28,8 +28,6 @@ export default function Login(props) {
       dispatch({ type: "LOGIN_FAILURE" })
     }
   } 
-
-  // console.log(isFetching)
 
   return (
     <div className='login'>

@@ -13,20 +13,13 @@ export default function Navlinks(props) {
             >
             Home
         </NavLink>
-        <NavLink 
+        {/* <NavLink 
             to="/about"
             className={ ({isActive}) => (isActive ? "activeLink" : "")}
             onClick={() => props.setOpen(false)}
             >
             About
-        </NavLink>
-        <NavLink 
-            to="/contact"
-            className={ ({isActive}) => (isActive ? "activeLink" : "")}
-            onClick={() => props.setOpen(false)}
-            >
-            Contact
-        </NavLink>
+        </NavLink> */}
         <NavLink 
             to="/write"
             className={ ({isActive}) => (isActive ? "activeLink" : "")}
@@ -35,12 +28,19 @@ export default function Navlinks(props) {
             Write
         </NavLink>
         <NavLink 
+            to="/contact"
+            className={ ({isActive}) => (isActive ? "activeLink" : "")}
+            onClick={() => props.setOpen(false)}
+            >
+            Contact
+        </NavLink>
+        {/* <NavLink 
             to="/news"
             className={ ({isActive}) => (isActive ? "activeLink" : "")}
             onClick={() => props.setOpen(false)}
             >
             News
-        </NavLink>
+        </NavLink> */}
     </>
   )
 }

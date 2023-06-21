@@ -1,8 +1,7 @@
 const router = require("express").Router()
-const User = require("../models/User")
 const Post = require("../models/Post")
 
-// CREATE POST
+// Creating Post
 router.post("/", async (req, res) => {
     const newPost = new Post(req.body);
     try {
@@ -13,7 +12,7 @@ router.post("/", async (req, res) => {
     }
 })
 
-// UPDATE POST
+// Updating Post
 router.put("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)
@@ -36,7 +35,7 @@ router.put("/:id", async (req, res) => {
     }
 })
 
-// DELETE POST 
+// Deleting Post
 router.delete("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)
@@ -57,7 +56,7 @@ router.delete("/:id", async (req, res) => {
     }
 })
 
-// GET POST
+// Get Post
 router.get("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)
@@ -68,13 +67,13 @@ router.get("/:id", async (req, res) => {
     }
 })
 
-// GET ALL POSTS 
+// Get all posts 
 router.get("/", async (req, res) => {
     try {
         const username = req.query.user;
         const category = req.query.cat;
 
-        let posts;
+        let posts = {};
         if(username) {
             posts = await Post.find({username: username})
         }

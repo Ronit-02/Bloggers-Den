@@ -8,12 +8,13 @@ import BlogPage from './pages/blogPage/blogPage'
 import About from './pages/about/about';
 import Contact from './pages/contact/contact';
 import Write from './pages/write/write'
-import News from './pages/news/news';
 import Footer from './components/footer'
 import NotFound from './components/notFound'
+// import News from './pages/news/news';
 // import Social from './components/social';
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import { Route, Routes } from "react-router-dom"
+import { useContext } from 'react'
 import { Context } from './context/Context';
 
 function App() {
@@ -33,9 +34,9 @@ function App() {
   return (
     <div id={`${theme}`}>
     
-      {/* { user 
+      { user 
 
-      ? <> */}
+      ? <>
       <Navbar theme={theme} toggleTheme={toggleTheme}/>
       <Routes>
         <Route path="/" element={ <Home />} />
@@ -43,21 +44,21 @@ function App() {
         <Route path="/contact" element={ <Contact />} />
         <Route path="/write" element={ <Write />} />
         <Route path="/post/:id" element={ <BlogPage />} />
-        <Route path="/news" element={ <News />} />
+        {/* <Route path="/news" element={ <News />} /> */}
         {/* <Route path="/login" element={ <Login />} /> */}
         {/* <Route path="/register" element={ <Register /> } /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
       {/* <Social /> */}
-      {/* </>
+      </>
       
       : 
       <Routes>
         <Route path="/" element={ <Login />} />
         <Route path="/register" element={ <Register />} />
       </Routes>
-      } */}
+      }
 
     </div>
   );
