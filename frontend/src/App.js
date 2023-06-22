@@ -1,21 +1,21 @@
 import './App.css';
 
-import Navbar from './components/navbar'
-import Login from './pages/login/login'
-import Register from './pages/login/register'
-import Home from './pages/home/home';
-import BlogPage from './pages/blogPage/blogPage'
-import About from './pages/about/about';
-import Contact from './pages/contact/contact';
-import Write from './pages/write/write'
-import Footer from './components/footer'
-import NotFound from './components/notFound'
+import Navbar from './components/navbar.js'
+import Login from './pages/login/login.js'
+import Register from './pages/login/register.js'
+import Home from './pages/home/home.js';
+import BlogPage from './pages/blogPage/blogPage.js'
+import About from './pages/about/about.js';
+import Contact from './pages/contact/contact.js';
+import Write from './pages/write/write.js'
+import Footer from './components/footer.js'
+import NotFound from './components/notFound.js'
 // import News from './pages/news/news';
 // import Social from './components/social';
 import { useState } from 'react';
 import { Route, Routes } from "react-router-dom"
 import { useContext } from 'react'
-import { Context } from './context/Context';
+import { Context } from './context/Context.js';
 
 function App() {
 

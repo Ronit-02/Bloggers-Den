@@ -7,6 +7,7 @@ const path = require("path")
 const authRoute = require("./routes/auth")
 const userRoute = require("./routes/users")
 const postRoute = require("./routes/posts")
+// const { default: header } = require("../frontend/src/pages/home/header")
 
 const PORT = process.env.PORT || 5000; 
 dotenv.config();
@@ -19,6 +20,11 @@ mongoose.connect(process.env.MONGO_URL, {
 })
 .then(console.log("Connected to monogdb.."))
 .catch((err) => console.log(err)) 
+
+// CORS Policy Headers
+// header('Access-Control-Allow-Origin: localhost:3000');
+// header('Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE');
+// header('Access-Control-Allow-Headers: Content-Type, X-Auth-Token, Origin, Authorization');
 
 // UPLOADING FILE
 app.use(express.urlencoded({extended: false}))
@@ -39,9 +45,9 @@ app.post("/api/upload", upload.single("file"), (req,res) => {
 })
 
 // USING ROUTES
-app.use("/auth", authRoute);
-app.use("/users", userRoute);  
-app.use("/posts", postRoute);  
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);  
+app.use("/api/posts", postRoute);  
 
 
 // LISTENING

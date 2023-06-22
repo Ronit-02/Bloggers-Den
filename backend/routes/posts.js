@@ -1,8 +1,9 @@
 const router = require("express").Router()
 const Post = require("../models/Post")
 
-// Creating Post
+// Create Post
 router.post("/", async (req, res) => {
+    res.json("hi")
     const newPost = new Post(req.body);
     try {
         const savedPost = await newPost.save();
@@ -12,7 +13,7 @@ router.post("/", async (req, res) => {
     }
 })
 
-// Updating Post
+// Update Post
 router.put("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)
@@ -35,7 +36,7 @@ router.put("/:id", async (req, res) => {
     }
 })
 
-// Deleting Post
+// Delete Post
 router.delete("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)
@@ -56,7 +57,7 @@ router.delete("/:id", async (req, res) => {
     }
 })
 
-// Get Post
+// Get a Post
 router.get("/:id", async (req, res) => {
     try {
         const post = await Post.findById(req.params.id)
@@ -70,23 +71,22 @@ router.get("/:id", async (req, res) => {
 // Get all posts 
 router.get("/", async (req, res) => {
     try {
-        const username = req.query.user;
-        const category = req.query.cat;
+        
+        const posts = await Post.find();
 
-        let posts = {};
-        if(username) {
-            posts = await Post.find({username: username})
-        }
-        else if(category){
-            posts = await Post.find({
-                categories: {
-                    $in: [category]
-                }
-            })
-        }
-        else {
-            posts = await Post.find();
-        }
+        // const username = req.query.user;
+        // const category = req.query.cat;
+
+        // if(username) {
+        //     posts = await Post.find({username: username})
+        // }
+        // else if(category){
+        //     posts = await Post.find({
+        //         categories: {
+        //             $in: [category]
+        //         }
+        //     })
+        // }
 
         res.status(200).json(posts)
 

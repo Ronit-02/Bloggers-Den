@@ -2,7 +2,8 @@ import '../../styles/home.css'
 
 import Header from './header'
 import Hero from './hero' 
-import axios from '../../axios'
+// import axios from '../../axios'
+import axios from 'axios'
 import { useEffect, useState } from 'react'
 // import { useLocation } from 'react-router-dom'
 
@@ -15,7 +16,7 @@ export default function Home() {
   useEffect(() => {
 
     const fetchPost = async () => {
-      const res = await axios.get("/posts")
+      const res = await axios.get("/posts/")
       setPost(res.data)
     }
 
