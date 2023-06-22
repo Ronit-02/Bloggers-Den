@@ -20,7 +20,7 @@ export default function Login(props) {
       console.log("sending login request")
       console.log(userRef.current.value)
       console.log(passwordRef.current.value)
-      const res = await axios.post("/auth/login", {
+      const res = await axios.post("https://bloggersden-backend.onrender.com/auth/login", {
         username: userRef.current.value,
         password: passwordRef.current.value
       })
