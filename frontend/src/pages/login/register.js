@@ -1,6 +1,6 @@
 import '../../styles/register.css'
 
-import axios from '../../axios'
+import axios from 'axios'
 import { BsFacebook } from 'react-icons/bs'
 import { AiFillRocket } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
@@ -17,7 +17,7 @@ export default function Register() {
     try{
       e.preventDefault();
       setError(false)
-      const res = await axios.post("/auth/register", {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, {
         username, email, password
       })
 

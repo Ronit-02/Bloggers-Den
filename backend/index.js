@@ -8,14 +8,13 @@ const authRoute = require("./routes/auth")
 const userRoute = require("./routes/users")
 const postRoute = require("./routes/posts")
 const cors = require('cors')
-// const { default: header } = require("../frontend/src/pages/home/header")
 
 const PORT = process.env.PORT || 5000; 
 dotenv.config();
 app.use(express.json());
 app.use(
     cors({
-        origin: "https://bloggersden.live"
+        origin: '*'
     })
 )
 

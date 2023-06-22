@@ -2,10 +2,8 @@ import '../../styles/home.css'
 
 import Header from './header'
 import Hero from './hero' 
-// import axios from '../../axios'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-// import { useLocation } from 'react-router-dom'
 
 export default function Home() {
 
@@ -16,7 +14,7 @@ export default function Home() {
   useEffect(() => {
 
     const fetchPost = async () => {
-      const res = await axios.get("https://bloggersden-backend.onrender.com/posts/")
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/posts/`)
       setPost(res.data)
     }
 

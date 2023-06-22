@@ -11,7 +11,7 @@ export default function BlogPage() {
 
   const {id} = useParams()
   const [post, setPost] = useState({})
-  const PF = "https://bloggersden-backend.onrender.com/uploads/"
+  const PF = `${process.env.REACT_APP_API_URL}/uploads/`
   const { user } = useContext(Context)
   const [update, setUpdate] = useState(false)
   const [title, setTitle] = useState("")
@@ -19,7 +19,7 @@ export default function BlogPage() {
 
   useEffect(() => { 
     const fetchPost = async () => {
-      const res = await axios.get("https://bloggersden-backend.onrender.com/posts/" + id)
+      const res = await axios.get(`${process.env.REACT_APP_API_URL}/posts/` + id)
       setPost(res.data)
       setTitle(res.data.title)
       setDesc(res.data.desc)
@@ -30,7 +30,7 @@ export default function BlogPage() {
 
   const handleDeletePost = async () => {
     try{
-      await axios.delete("https://bloggersden-backend.onrender.com/posts/" + id, {data:{username: user.username}})
+      await axios.delete(`${process.env.REACT_APP_API_URL}/posts/` + id, {data:{username: user.username}})
       // redirecting to homepage
       window.location.replace('/')
     } catch(err) {

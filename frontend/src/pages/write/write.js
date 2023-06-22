@@ -1,6 +1,6 @@
 import '../../styles/write.css'
 
-import axios from '../../axios'
+import axios from 'axios'
 import { useState, useEffect, useContext } from 'react';
 import { Context } from '../../context/Context';
 
@@ -34,13 +34,13 @@ export default function Write() {
       data.append("file", file)
       newPost.photo = filename
       try{
-        await axios.post("https://bloggersden-backend.onrender.com/upload", data)
+        await axios.post(`${process.env.REACT_APP_API_URL}/upload`, data)
       } 
       catch(err){ }
     }
 
     try{
-      const res = await axios.post("https://bloggersden-backend.onrender.com/posts", newPost)
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/posts/`, newPost)
       window.location.replace("/post/" + res.data._id)
     }
     catch(err) { }

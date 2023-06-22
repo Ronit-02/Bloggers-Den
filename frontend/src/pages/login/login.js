@@ -17,10 +17,7 @@ export default function Login(props) {
     e.preventDefault()
     dispatch({ type: "LOGIN_START" })
     try {
-      console.log("sending login request")
-      console.log(userRef.current.value)
-      console.log(passwordRef.current.value)
-      const res = await axios.post("https://bloggersden-backend.onrender.com/auth/login", {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, {
         username: userRef.current.value,
         password: passwordRef.current.value
       })
