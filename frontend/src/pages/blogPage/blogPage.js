@@ -30,7 +30,7 @@ export default function BlogPage() {
 
   const handleDeletePost = async () => {
     try{
-      await axios.delete("/posts/" + id, {data:{username: user.username}})
+      await axios.delete("https://bloggersden-backend.onrender.com/posts/" + id, {data:{username: user.username}})
       // redirecting to homepage
       window.location.replace('/')
     } catch(err) {
