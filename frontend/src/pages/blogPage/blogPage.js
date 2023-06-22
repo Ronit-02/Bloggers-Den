@@ -19,7 +19,7 @@ export default function BlogPage() {
 
   useEffect(() => { 
     const fetchPost = async () => {
-      const res = await axios.get("/posts/" + id)
+      const res = await axios.get("https://bloggersden-backend.onrender.com/posts/" + id)
       setPost(res.data)
       setTitle(res.data.title)
       setDesc(res.data.desc)
