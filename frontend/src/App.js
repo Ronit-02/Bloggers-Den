@@ -45,8 +45,6 @@ function App() {
         <Route path="/write" element={ <Write />} />
         <Route path="/post/:id" element={ <BlogPage />} />
         {/* <Route path="/news" element={ <News />} /> */}
-        {/* <Route path="/login" element={ <Login />} /> */}
-        {/* <Route path="/register" element={ <Register /> } /> */}
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

@@ -1,6 +1,6 @@
 import '../../styles/blogPage.css'
 
-import axios from 'axios'
+import axios from '../../axios'
 import { Link, useParams } from 'react-router-dom' 
 import { useState, useEffect, useContext } from 'react'
 import { Context } from '../../context/Context'

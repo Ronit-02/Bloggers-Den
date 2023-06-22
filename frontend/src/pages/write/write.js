@@ -1,6 +1,6 @@
 import '../../styles/write.css'
 
-import axios from 'axios'
+import axios from '../../axios'
 import { useState, useEffect, useContext } from 'react';
 import { Context } from '../../context/Context';
 
@@ -17,7 +17,7 @@ export default function Write() {
     localStorage.setItem('blog', JSON.stringify(blog))
   }, [blog])
 
-  // STORY SUBMISSION
+  // Story Submission
   const handlePublish = async (e) => {
     e.preventDefault()
 
@@ -48,8 +48,7 @@ export default function Write() {
     localStorage.removeItem("blog");
   }
 
-  // ON CHANGE HANDLERS
-  function handleOnChange(event) {
+  const handleOnChange = (event) => {
     const { name, value } = event.target
     setBlog((prevBlog) => {
       return { 
@@ -59,7 +58,7 @@ export default function Write() {
     })
   }
 
-  // TIME TO READ
+  // Time to Read
   let words = story.split(" ").length;
   let time = (0.08 * words).toFixed(1);
 

@@ -1,6 +1,6 @@
 import '../../styles/login.css'
 
-import axios from 'axios'
+import axios from '../../axios'
 import { Context } from '../../context/Context'
 import { Link } from 'react-router-dom'
 import { useRef, useContext } from 'react'

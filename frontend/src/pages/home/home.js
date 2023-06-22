@@ -2,16 +2,13 @@ import '../../styles/home.css'
 
 import Header from './header'
 import Hero from './hero' 
-import axios from 'axios'
+import axios from '../../axios'
 import { useEffect, useState } from 'react'
-// import { Context } from '../../context/Context'
 // import { useLocation } from 'react-router-dom'
 
 export default function Home() {
 
   const [post, setPost] = useState([]);
-  // const { user } = useContext(Context)
-
   // for fetching related posts (user, category wise)
   // const {search} = useLocation()
 

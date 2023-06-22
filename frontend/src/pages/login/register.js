@@ -1,6 +1,6 @@
 import '../../styles/register.css'
 
-import axios from 'axios'
+import axios from '../../axios'
 import { BsFacebook } from 'react-icons/bs'
 import { AiFillRocket } from 'react-icons/ai'
 import { Link } from 'react-router-dom'
