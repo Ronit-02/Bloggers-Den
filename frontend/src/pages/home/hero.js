@@ -4,7 +4,7 @@ import Card from '../../components/card'
 
 export default function Hero({post}) {
 
-  const PF = "http://localhost:5000/uploads/";  
+  const PF = "https://bloggersden-backend.onrender.com/uploads/";  
 
   const cards = post.map(item => {
 
